@@ -1,38 +1,194 @@
-.App {
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d0d0d; /* Fundo escuro */
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #1a1a1a; /* Preto escuro */
+}
+
+.header .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ff66; /* Verde neon */
+}
+
+.header .navigation a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .cta {
+  padding: 8px 15px;
+  background-color: #00ff66; /* Verde neon */
+  color: #0d0d0d; /* Preto escuro */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.hero {
+  height: 50vh;
+  background: linear-gradient(to right, #00ff66, #003300); /* Gradiente verde neon para verde escuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero .hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f0f2f1; /* Verde neon */
+}
+
+.hero .hero-text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #bfbfbf; /* Cinza claro */
+}
+
+.hero .cta {
+  padding: 12px 25px;
+  background-color: #00ff66; /* Verde neon */
+  color: #0d0d0d; /* Preto escuro */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.features, .testimonials, .pricing {
+  padding: 30px 15px;
+  text-align: center;
+  background-color: #111; /* Fundo escuro */
+}
+
+.features-grid, .testimonials-grid, .pricing-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature-item, .testimonial-item, .pricing-item {
+  width: 28%;
+  padding: 15px;
+  background-color: #1a1a1a; /* Preto escuro */
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #00ff66; /* Borda verde neon */
+}
+
+.pricing-item h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #00ff66; /* Verde neon */
+}
+
+.pricing-item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.pricing-item ul li {
+  margin: 8px 0;
+  color: #bfbfbf; /* Cinza claro */
+}
+
+.footer {
+  background-color: #1a1a1a; /* Preto escuro */
+  padding: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.footer-links, .social-media {
+  margin-top: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.footer-links a, .social-media a {
+  margin: 0 5px;
+  color: #00ff66; /* Verde neon */
+  text-decoration: none;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .feature-item, .testimonial-item, .pricing-item {
+    width: 45%; /* Ajuste para telas médias */
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header .cta {
+    margin-top: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .features-grid, .testimonials-grid, .pricing-grid {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .feature-item, .testimonial-item, .pricing-item {
+    width: 80%; /* Ajuste para tablets */
+  }
+
+  .hero .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .hero .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero .cta {
+    padding: 10px 20px;
+    font-size: 14px;
+
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .feature-item, .testimonial-item, .pricing-item {
+    width: 90%; /* Ajuste para celulares */
+  }
+
+  .hero .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero .hero-text p {
+    font-size: 12px;
+  }
+
+  .hero .cta {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .header .logo {
+    font-size: 18px;
+  }
+
+  .header .cta {
+    font-size: 14px;
+    padding: 5px 10px;
   }
 }
